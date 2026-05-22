@@ -1,0 +1,104 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "chumy",
+  "homepage": "https://github.com/tommasopanizzo/folder-designui",
+  "items": [
+    {
+      "name": "folder",
+      "type": "registry:ui",
+      "title": "Folder",
+      "description": "Animated folder. Pass items (images or custom React).",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "categories": [
+        "folder"
+      ],
+      "files": [
+        {
+          "path": "components/folder.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/folder-item-media.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/folder-hover-popover.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "folder-inside",
+      "type": "registry:component",
+      "title": "Folder Inside",
+      "description": "Icons on the folder front flap.",
+      "registryDependencies": [
+        "@chumy/folder"
+      ],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "categories": [
+        "folder"
+      ],
+      "files": [
+        {
+          "path": "registry/default/folder-inside/folder-inside.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "folder-hover",
+      "type": "registry:component",
+      "title": "Folder Hover",
+      "description": "Static folder + hover popover.",
+      "registryDependencies": [
+        "@chumy/folder"
+      ],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "categories": [
+        "folder"
+      ],
+      "files": [
+        {
+          "path": "registry/default/folder-hover/folder-hover.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "folder-cards",
+      "type": "registry:component",
+      "title": "Folder Cards",
+      "description": "Opens on hover; three cards fly out.",
+      "registryDependencies": [
+        "@chumy/folder"
+      ],
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "categories": [
+        "folder"
+      ],
+      "files": [
+        {
+          "path": "registry/default/folder-cards/folder-cards.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

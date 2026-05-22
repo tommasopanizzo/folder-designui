@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "folder-inside",
+  "title": "Folder Inside",
+  "description": "Icons on the folder front flap.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [
+    "@chumy/folder"
+  ],
+  "files": [
+    {
+      "path": "registry/default/folder-inside/folder-inside.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { Folder } from \"@/components/folder\";\n\nexport function FolderInside(props: Omit<ComponentProps<typeof Folder>, \"mode\">) {\n  return <Folder mode=\"inside\" {...props} />;\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": [
+    "folder"
+  ],
+  "type": "registry:component"
+}
