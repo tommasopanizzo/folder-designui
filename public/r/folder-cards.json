@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "folder-cards",
+  "title": "Folder Cards",
+  "description": "Opens on hover; three cards fly out.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [
+    "@chumy/folder"
+  ],
+  "files": [
+    {
+      "path": "registry/default/folder-cards/folder-cards.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { Folder } from \"@/components/folder\";\n\nexport function FolderCards(props: Omit<ComponentProps<typeof Folder>, \"mode\">) {\n  return <Folder mode=\"cards\" {...props} />;\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": [
+    "folder"
+  ],
+  "type": "registry:component"
+}

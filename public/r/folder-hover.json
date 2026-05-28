@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "folder-hover",
+  "title": "Folder Hover",
+  "description": "Static folder + hover popover.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [
+    "@chumy/folder"
+  ],
+  "files": [
+    {
+      "path": "registry/default/folder-hover/folder-hover.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { useState } from \"react\";\nimport { Folder } from \"@/components/folder\";\nimport { FolderHoverPopover } from \"@/components/folder-hover-popover\";\nimport { cn } from \"@/lib/utils\";\n\nexport function FolderHover(props: Omit<ComponentProps<typeof Folder>, \"mode\"> & { className?: string }) {\n  const { className, items = [], ...rest } = props;\n  const [hovered, setHovered] = useState(false);\n  return (\n    <div className={cn(\"relative flex min-h-[200px] flex-col items-center\", className)} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>\n      <div className=\"relative flex w-[112px] flex-col items-center pt-4\">\n        <Folder mode=\"hover\" items={items} {...rest} />\n      </div>\n      {hovered && items.length > 0 ? <FolderHoverPopover items={items} renderItem={rest.renderItem} /> : null}\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": [
+    "folder"
+  ],
+  "type": "registry:component"
+}
